@@ -1,9 +1,10 @@
 @font-face {
   font-family: "iransans";
-  src: url('../src/assets/fonts/FontsFree-Net-ir_sans.ttf')format("truetype");
+  src: url('./assets/fonts/FontsFree-Net-ir_sans.ttf')format("truetype");
 }
 
 #root{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

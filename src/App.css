@@ -1,86 +1,107 @@
 
+html {
+  font-size: 62.5%;
+}
 
-.container {
-  width: 90%;
-  height: auto;
+body {
+  background-color: #3d51b5;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  font-family: "vazir";
+  direction: rtl;
+}
+
+.main {
+  margin: 2rem auto;
+  max-width: 50rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
 }
 
 .header {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+  padding: 2rem 4rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: #3f51b5;
+  user-select: none;
+}
+
+.form {
+  padding: 3rem 4rem;
+}
+
+.form button {
   width: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  background-color: #3d51b5;
+  color: #fff;
+  padding: .8rem 0;
+  border-radius: .4rem;
+  border: .1rem solid transparent;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all .3s;
+  font-size: 1.8rem;
+  font-family: "vazir";
 }
 
-.contact {
+.form button:hover {
+  background: transparent;
+  border: .1rem solid #3f51b5;
+  color: #333;
+}
+
+.form-controls {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-controls label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #212121;
+  font-size: 1.2rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.form-controls input {
   width: 100%;
-  height: 220px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  border: .2rem solid #d8d8d8;
+  border-radius: .5rem;
+  display: block;
+  font-size: 1.4rem;
+  padding: 1rem;
+  direction: ltr;
 }
 
-
-.input {
-  margin: 5px 0px;
-  width: 90%;
-  height: 35px;
-  border: 1px solid lightgray;
+.form-controls input:focus {
+  outline: none;
+  border-color: #9fa8da;
 }
 
-.input::placeholder {
-  font-size: 12px;
-  text-align: center;
+.form-controls.success input {
+  border-color: #66bb6a;
 }
 
-
-.weblog-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0px;
+.form-controls.error input {
+  border-color: #ef5350;
 }
 
-hr {
-  color: black;
-  width: 100%;
+.form-controls small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  color: #ef5350;
 }
 
-.div-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 900px) {
-  .contact {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      align-items: center;
-  }
-  .div-form,
-  .div-title {
-      width: 100%;
-  }
-  .div-title {
-      padding: 80px;
-  }
-  .header>img {
-      display: none;
-  }
-  .weblog-title {
-      margin-top: 100px;
-  }
+.form-controls.error small {
+  visibility: visible;
 }
